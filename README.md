@@ -10,12 +10,13 @@ This plugin provides a field type for choosing sites. Entries using this field c
 
 ## Example Usage
 
-To display only entries related to the current site you could use the following logic:
+To display only events related to the current site you could use the following logic:
 
 ```twig
-{% for entry in entries %}
-  {% if craft.app.sites.currentSite.id in entry.siteIds %}
-    ...
+{% set events = craft.entries.site('main').section('blog').type('event').orderBy('date asc').all() %}
+{% for event in events %}
+  {% if craft.app.sites.currentSite.id in event.siteIds %}
+    {# show this event... #}
   {% endif %}
 {% endfor %}
 ```
