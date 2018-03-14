@@ -21,4 +21,4 @@ To display only events related to the current site you could use the following l
 {% endfor %}
 ```
 
-> Note: `siteIds` is the field name defined for this fieldtype and returns an array of site ID's which you can use the twig [in](https://twig.symfony.com/doc/2.x/templates.html#containment-operator) operator.
+> Note: `siteIds` returns an array of site ID's which you can use the twig [in](https://twig.symfony.com/doc/2.x/templates.html#containment-operator) operator.
